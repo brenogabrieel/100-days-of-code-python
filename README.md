@@ -6,6 +6,8 @@ A proposta do curso é programar todos os dias durante 100 dias, construindo **u
 
 Cada pasta `DayXX...` é um projeto independente.
 
+> 📅 **Sobre as datas:** fiz estes projetos em **2023** e só agora, em 2026, organizei e publiquei o repositório. Por isso o histórico de commits começa em 2026. Antes de subir, revisei os projetos: tirei chaves de API e senhas do código e corrigi alguns bugs. A lógica original de cada projeto foi mantida.
+
 ## 🧠 O que pratiquei
 
 - **Fundamentos de Python:** variáveis, condicionais, loops, funções, listas e dicionários, escopo, depuração
