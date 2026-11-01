@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title %}Restaurants{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h1>All Cafes</h1>
+
+	  <table class="table table-dark table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Cafe Name</th>
+                    <th>Location</th>
+                    <th>Open</th>
+                    <th>Close</th>
+                    <th>Coffee</th>
+                    <th>Wifi</th>
+                    <th>Power</th>
+                </tr>
+                <tr>
+               <p> <th>Lighthaus</th></p>
+                <th><a href="https://goo.gl/maps/2EvhB4oq4gyUXKXx9">Maps link</a></th>
+                <p><th>11AM</th></p>
+                <p><th>3:30PM</th></p>
+                <p><th>☕☕☕☕️</th></p>
+                <p><th>💪💪</th></p>
+                <p><th>🔌🔌🔌</th></p>
+                </tr>
+                <tr>
+               <p> <th>Esters</th></p>
+                <th><a href="https://goo.gl/maps/13Tjc36HuPWLELaSA">Maps link</a></th>
+                <p><th>8AM</th></p>
+                <p><th>3PM</th></p>
+                <p><th>☕☕☕☕️</th></p>
+                <p><th>💪💪💪</th></p>
+                <p><th>🔌</th></p>
+                </tr>
+              <tr>
+               <p> <th>Ginger & White</th></p>
+                <th><a href="https://goo.gl/maps/DqMx2g5LiAqv3pJQ9">Maps link</a></th>
+                <p><th>7:30AM</th></p>
+                <p><th>5:30PM</th></p>
+                <p><th>☕☕☕</th></p>
+                <p><th>✘</th></p>
+                <p><th>🔌</th></p>
+                </tr>
+              <tr>
+               <p> <th>Mare Street Market</th></p>
+                <th><a href="https://goo.gl/maps/ALR8iBiNN6tVfuAA8">Maps link</a></th>
+                <p><th>8AM</th></p>
+                <p><th>1PM</th></p>
+                <p><th>☕☕</th></p>
+                <p><th>💪💪💪</th></p>
+                <p><th>🔌🔌🔌</th></p>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cafe in cafe_data %}
+                                   <tr>
+
+                {% endfor %}
+
+  	  </table>
+
+      <p><a href="#">Return to index page</a></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

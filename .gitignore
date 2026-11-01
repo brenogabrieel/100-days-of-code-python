@@ -1,0 +1,36 @@
+# Secrets - never commit. Each project that needs them ships a .env.example.
+.env
+*.env
+!.env.example
+token.txt
+.cache
+.cache-*
+
+# Personal data from the password manager (Day 29-30). See data.example.json.
+Day29-30PasswordGenerator/data.json
+Day29-30PasswordGenerator/data.txt
+
+# Virtual environments and dependencies
+venv/
+.venv/
+env/
+node_modules/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# IDE
+.idea/
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Flask server-side sessions
+flask_session/
+
+# macOS junk that came inside the course zip files
+__MACOSX/
+.DS_Store
+._*

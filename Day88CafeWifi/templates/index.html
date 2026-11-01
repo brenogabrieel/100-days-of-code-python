@@ -1,0 +1,57 @@
+<!--HOMEPAGE SHOWS OVERVIEWS OF ALL CAFES IN THE DB-->
+{% include "header.html" %}
+
+
+  <header class="masthead" style="background-image: url('https://wallpapers.com/images/high/meeting-over-coffee-aesthetic-ga2v27qt7nygquka.webp')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Coffee & Wifi</h1>
+            <span class="subheading">Sample text. <br> <br>
+              Sample text. </span>
+          </div>
+          <div class="sub-text">
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- creates a card for every Cafe in the DB-->
+      {% for cafe in all_cafes %}
+      <div class="col-lg-4 col-md-6 mx-auto text-left">
+        <div class="card">
+          <div class="card-header">
+            <a href="{{ url_for('show_cafe', cafe_id=cafe.id) }}"> <h5>  {{ cafe.name }} </h5> </a>
+          </div>
+          <div class="class-body">
+            <p class="card-text">🕒{{ cafe.open }} - {{ cafe.close }}</p>
+            <p class="card-text">🧭{{ cafe.location }}</p>
+          </div>
+          <br>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mx-auto text-center">
+         <a class="btn btn-primary" href="{{ url_for('show_all_cafes') }}">Show all Cafes</a>
+      </div>
+      {% if current_user.is_authenticated: %}
+      <div class="col-lg-4 col-md-6 mx-auto text-center">
+         <a class="btn btn-primary" href="{{ url_for('add_cafe') }}">Add Cafe</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+
+<hr>
+
+{% include "footer.html" %}
